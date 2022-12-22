@@ -12,7 +12,7 @@ GitFinder is a web application built as a part of Fyle Frontend Internship Chall
 <img src="https://i.imgur.com/y4oV9VV.png" alt="colored line"  witdth="100px" align="left">
 </br>
 
-<p >`Live Site` :  https://gitfinder-7735d.web.app/ </p>
+<p >Live Site :  https://gitfinder-7735d.web.app/ </p>
 
 ### Steps for setup and usage
 
