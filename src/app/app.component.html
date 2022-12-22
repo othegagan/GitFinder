@@ -1,0 +1,10 @@
+<div class='min-h-screen bg-gray-900 lg:px-40 md:px-8 flex flex-col'>
+    <user-search (onUserSearch)="userSearchHandler($event)"></user-search>
+
+    <div *ngIf="username !== '' && username !== null ">
+        <user-details [username]="username"></user-details>
+    </div>
+
+    <footer-component class="mt-auto"> </footer-component>
+
+</div>

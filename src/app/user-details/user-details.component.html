@@ -1,0 +1,66 @@
+<div *ngIf="fetchingInfo">
+    <loader [text]="'Loading User Details'"></loader>
+</div>
+
+<div *ngIf="userInfo" class="flex flex-col gap-8  justify-center">
+
+    <!-- basic profile  -->
+    <div class="flex flex-wrap items-center justify-center p-4  rounded-md ">
+
+        <div class="md:w-3/12 md:ml-16">
+            <!-- profile image -->
+            <a [href]="userInfo.html_url">
+                <img class="md:w-32 h-32  lg:h-52 lg:w-52  object-cover rounded-full border-2 border-purple-500 p-1 hover:scale-110 "
+                    [src]="userInfo.avatar_url" alt="profile photo">
+            </a>
+        </div>
+
+        <!-- profile  -->
+        <div class=" ml-4">
+            <div class=" flex md:flex-row flex-col gap-4 mb-5">
+                <h2 class="text-2xl w-auto font-medium mr-5 mb-0  ">@{{userInfo.login}}</h2>
+
+                <div *ngIf="userInfo.location!== null" class="flex flex-row align-middle">
+                        <p class="text-lg">📌</p>
+                    <p class="text-lg">{{userInfo.location}}</p>
+                </div>
+            </div>
+
+            <!--   medium screens -->
+            <div class="hidden md:block mb-5">
+                <h1 class="font-semibold text-4xl">{{userInfo.name}}</h1>
+                <p class="text-xs mt-2 text-gray-400" *ngIf="userInfo.bio">{{userInfo.bio}}</p>
+            </div>
+
+            <!-- post, following, followers list for medium screens -->
+            <ul class="hidden md:flex space-x-8 mb-4">
+                <li class="font-semibold text-xs lg:text-base ">{{userInfo.public_repos}} repos </li>
+                <li class="font-semibold text-xs lg:text-base ">{{userInfo.followers}} followers </li>
+                <li class="font-semibold text-xs lg:text-base ">{{userInfo.following}} following </li>
+            </ul>
+            <!-- View profile button -->
+            <a [href]="userInfo.html_url"
+                class="bg-purple-600 px-2 py-1  text-white font-semibold text-sm rounded block text-center hover:scale-110 sm:inline-block ">View
+                On GitHub</a>
+        </div>
+
+        <!--   small screens -->
+        <div class="flex flex-col ">
+            <div class="md:hidden text-sm my-2">
+                <h1 class="font-semibold text-xl tracking-wider">{{userInfo.name}}</h1>
+                <p class="text-xs mt-2" *ngIf="userInfo.bio">{{userInfo.bio}}</p>
+            </div>
+            <ul class="lg:hidden md:hidden flex space-x-8 my-5">
+                <li class="font-semibold text-xs lg:text-base ">{{userInfo.public_repos}} repos </li>
+                <li class="font-semibold text-xs lg:text-base ">{{userInfo.followers}} followers </li>
+                <li class="font-semibold text-xs lg:text-base ">{{userInfo.following}} following </li>
+            </ul>
+        </div>
+    </div>
+
+    <user-repos [totalRepos]="userInfo.public_repos" [username]="username"></user-repos>
+</div>
+
+<div *ngIf="!userInfo && !fetchingInfo">
+    <error [error]="'User details not found ＞︿＜'"></error>
+</div>

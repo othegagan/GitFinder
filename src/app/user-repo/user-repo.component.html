@@ -1,0 +1,10 @@
+<div class="min-w-0 rounded-lg shadow-xs overflow-hidden bg-gray-800">
+    <div class="p-4">
+        <a class="mb-4 font-semibold text-gray-300 text-base capitalize" [href]="repo.html_url">{{repo.name}}</a>
+        <p class="text-gray-400 mt-3">{{repo.description}}</p>
+        <div class="flex flex-wrap items-center ">
+            <div *ngFor="let topic of repo.topics"
+                class="px-3 py-1 rounded-md text-sm mr-2  text-white bg-purple-600  hover:bg-purple-700 mt-5">{{topic}}</div>
+        </div>
+    </div>
+</div>

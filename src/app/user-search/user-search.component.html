@@ -1,0 +1,21 @@
+<main class="flex items-center justify-center p-6 sm:p-10  text-white">
+    <div class="w-full flex flex-col justify-center items-center">
+        <a href="/">
+        <div class="text-center mb-6 flex flex-row items-center justify-center">
+            <img src="../../assets/git-logo.svg" alt="git logo" class="h-20 w-20" alt="" srcset="">
+                <h1 class="ml-4 text-4xl font-bold text-white">Git <span class="text-purple-600"> Finder </span></h1>
+            </div>
+        </a>
+
+        <form [formGroup]="userSeacrhForm" (ngSubmit)="onUserSubmit()" class="flex flex-row item lg:w-3/4 sm:w-full">
+            <input
+                class="w-full pl-3 pr-3 sm:pl-1 sm:pr-1 text-sm leading-5 base:block  text-gray-300 form-input active:focus:border-purple-400 border-red-600  bg-gray-700 mr-4  rounded-md h-10"
+                type="text" placeholder="Search Github Username" formControlName="username" required />
+
+            <button
+                class="  w-32  h-10 text-base font-medium leading-5 text-white  bg-purple-600 rounded-lg cursor-pointer active:focus:border-purple-400"
+                type="submit">Search</button>
+        </form>
+
+    </div>
+</main>
