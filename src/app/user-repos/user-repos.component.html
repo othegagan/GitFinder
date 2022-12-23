@@ -11,7 +11,7 @@
     <div class="my-8 flex justify-center px-5">
         <ul>
             <li
-                *ngFor="let repo of userRepos.items | paginate: { itemsPerPage: maxPerPage, currentPage: currentPage }">
+                *ngFor="let repo of userRepos.items | paginate: { itemsPerPage: maxPerPage, currentPage: currentPage, totalItems: maxRepoLimiter() }">
             </li>
         </ul>
         <pagination-controls  (pageChange)="handlePageChange($event)" previousLabel="Previous"
