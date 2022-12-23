@@ -59,5 +59,5 @@ The application will then display the user's profile, including their repositori
 ![gitfinder (2)](https://user-images.githubusercontent.com/77300329/209223018-8fd50ae1-baf0-45db-a880-66969666fc79.png)
 
 <h3 align="center">💫 GitFinder. Made with ❤️ by <a href="https://github.com/othegagan/">Gagan Kumar</a> 🔥 </h3>
-<p align="center"> 🤙 +91-9036644552 | <a href="mailto:hi@thegagan.awsapps.com">hi@thegagan.awsapps.com</a> 📫</p>
+<p align="center"> 🤙 +91-9036644552  <a href="mailto:hi@thegagan.awsapps.com">hi@thegagan.awsapps.com</a> 📫</p>
 </center>
