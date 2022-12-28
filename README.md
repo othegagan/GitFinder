@@ -16,14 +16,14 @@ GitFinder is a web application built as a part of Fyle Frontend Internship Chall
 
 ### Steps for setup and usage
 
-### Featurese 🔥
-- 📱`Responsive web` a pplication, built on modern web technologies such as `Angular` and `Tailwind CSS`.
+### Features 🔥
+- 📱`Responsive web` application, built on modern web technologies such as `Angular` and `Tailwind CSS`.
 - Utilizes the `GitHub API` to access data.
 - Stores search `cache` to reduce `API requests` and provide faster access to data.
 - Easy to use and `intuitive user interface`.
 
 
-### Installation
+### Installation 💻
 
 - Go to Angular offical page and follow the instructions to install latest `Angular CLI`
 - Download all the file from the repo and keep it in a folder
@@ -32,7 +32,7 @@ GitFinder is a web application built as a part of Fyle Frontend Internship Chall
 - Go to https://github.com/settings/developers and create a new OAuth App
 - After successfull creation of app, copy the CLIENT_ID and CLIENT_SECERT 
 
-### Modification
+### Modification 📝
 
 - Go to `github.service.ts` in  `./src/app/service`
 - Replace the keys & save it. This would give access to more API requests.
